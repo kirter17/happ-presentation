@@ -277,6 +277,25 @@ h2 em{font-style:italic;color:var(--purple)}
 .flink{font-family:var(--mono);font-size:11px;color:var(--text2);text-decoration:none;padding:9px 18px;border:1px solid var(--line2);border-radius:8px;transition:all 0.14s;letter-spacing:0.3px}
 .flink:hover{color:var(--purple);border-color:rgba(124,111,238,0.35);background:var(--purple-dim)}
 
+/* DEVICE MOCKUPS */
+.device-desktop{background:var(--card);border:1px solid var(--line2);border-radius:12px;overflow:hidden;margin-top:36px}
+.device-bar{height:40px;background:var(--card2);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 16px;flex-shrink:0}
+.d-dots{display:flex;gap:6px;flex-shrink:0}
+.d-dots span{width:10px;height:10px;border-radius:50%;background:var(--line2)}
+.d-url{flex:1;max-width:340px;background:var(--bg);border:1px solid var(--line);border-radius:6px;height:24px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:var(--text2);letter-spacing:0.3px}
+.device-screen-wrap{overflow:hidden;height:490px;position:relative}
+.device-screen-wrap iframe{width:1280px;height:800px;transform-origin:0 0;transform:scale(0.6125);border:none;display:block}
+.devices-row{display:flex;gap:40px;justify-content:center;align-items:flex-start;margin-top:16px;flex-wrap:wrap}
+.dev-label{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1.5px;text-align:center;margin-bottom:12px}
+.device-ipad{background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:22px 10px 30px}
+.ipad-screen{overflow:hidden;border-radius:4px;width:260px;height:347px;border:1px solid var(--line)}
+.ipad-screen iframe{width:768px;height:1024px;transform-origin:0 0;transform:scale(0.3385);border:none;display:block}
+.device-iphone{background:var(--card);border:1px solid var(--line2);border-radius:38px;padding:30px 8px;position:relative}
+.device-iphone::before{content:'';position:absolute;top:13px;left:50%;transform:translateX(-50%);width:56px;height:5px;background:var(--line2);border-radius:3px}
+.device-iphone::after{content:'';position:absolute;bottom:11px;left:50%;transform:translateX(-50%);width:40px;height:4px;background:var(--line2);border-radius:2px}
+.iphone-screen{overflow:hidden;border-radius:26px;width:165px;height:357px;border:1px solid var(--line)}
+.iphone-screen iframe{width:375px;height:812px;transform-origin:0 0;transform:scale(0.44);border:none;display:block}
+
 @media(max-width:720px){
   .container{padding:0 24px}
   nav{padding:12px 20px}
@@ -307,6 +326,7 @@ h2 em{font-style:italic;color:var(--purple)}
     <a class="nav-link" href="#jtbd">JTBD</a>
     <a class="nav-link" href="#evolution">Итерации</a>
     <a class="nav-link" href="#decisions">Решения</a>
+    <a class="nav-link" href="#devices">Адаптив</a>
     <a class="nav-link" href="#result">Итог</a>
   </div>
   <div class="nav-actions">
@@ -695,10 +715,51 @@ h2 em{font-style:italic;color:var(--purple)}
   </div>
 </section>
 
-<!-- 07 RESULT -->
+<!-- 07 DEVICES -->
+<section id="devices">
+  <div class="container">
+    <div class="s-label"><span class="s-num">07</span>Адаптивность</div>
+    <h2>Лендинг на разных <em>устройствах</em></h2>
+    <p class="lead">Лендинг полностью адаптирован под десктоп, планшет и мобильные устройства.</p>
+
+    <!-- Desktop -->
+    <div class="device-desktop">
+      <div class="device-bar">
+        <div class="d-dots"><span></span><span></span><span></span></div>
+        <div class="d-url">kirter17.github.io/happ-main</div>
+      </div>
+      <div class="device-screen-wrap">
+        <iframe src="https://kirter17.github.io/happ-main/" loading="lazy" scrolling="no" title="Desktop preview"></iframe>
+      </div>
+    </div>
+    <div class="dev-label">DESKTOP · 1280px</div>
+
+    <!-- Tablet + Phone -->
+    <div class="devices-row">
+      <div>
+        <div class="dev-label">TABLET · 768px</div>
+        <div class="device-ipad">
+          <div class="ipad-screen">
+            <iframe src="https://kirter17.github.io/happ-main/" loading="lazy" scrolling="no" title="Tablet preview"></iframe>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="dev-label">MOBILE · 375px</div>
+        <div class="device-iphone">
+          <div class="iphone-screen">
+            <iframe src="https://kirter17.github.io/happ-main/" loading="lazy" scrolling="no" title="Mobile preview"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 RESULT -->
 <section id="result">
   <div class="container">
-    <div class="s-label"><span class="s-num">07</span>Итоговый результат</div>
+    <div class="s-label"><span class="s-num">08</span>Итоговый результат</div>
     <h2>Что <em>сделано</em></h2>
 
     <div class="checklist">
